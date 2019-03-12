@@ -1,0 +1,2 @@
+class TypeDeliverer < ApplicationRecord
+end

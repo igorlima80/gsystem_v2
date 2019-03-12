@@ -1,0 +1,2 @@
+class Estabilishment < ApplicationRecord
+end

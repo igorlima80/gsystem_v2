@@ -1,0 +1,157 @@
+# encoding: UTF-8
+pt-BR:
+  activerecord:
+    models: &MODELS
+      accommodation: Acomodação
+      accreditation_status: Status do Credenciamento
+      address: Endereço
+      cancellation: Cancelamento
+      city: Cidade
+      convenience: Comodidade
+      fee: Taxa
+      franchisee: Franqueado
+      guest: Visitante
+      menu_item: Item de Menu
+      payment_status: Status do Pagamento
+      payment_type: Tipo de Pagamento
+      property: Proprietário
+      rating: Avaliação
+      reserve: Reserva
+      reserve_status: Status da Reserva
+      role: Permissão
+      state: Estado
+      type_accommodation: Tipo de Acomodação
+      type_fee: Tipo de Taxa
+      type_trip: Tipo de Viagem
+      unavailability: Indisponibilidade
+      user: Usuário
+    attributes:
+      name_and_description: &BASIC
+        name: Nome
+        description: Descrição
+        created_at: Criação
+        updated_at: Atualização
+      accommodation:
+        <<: *BASIC
+        <<: *MODELS
+        value_per_night: Valor da Diária
+        maximum_adult: Máximo de Adultos
+        maximum_child: Máximo de Crianças
+        available: Disponível
+        rating_score: Nota de Avaliação
+        images: Imagens
+      accreditation_status:
+        <<: *BASIC
+        <<: *MODELS
+      address:
+        <<: *BASIC
+        <<: *MODELS
+        street: Logradouro
+        number: Número
+        complement: Complemento
+        district: Bairro
+        zipcode: CEP
+      cancellation:
+        <<: *BASIC
+        <<: *MODELS
+      city:
+        <<: *BASIC
+        <<: *MODELS
+        ibge: IBGE
+      convenience:
+        <<: *BASIC
+        <<: *MODELS
+      fee:
+        <<: *BASIC
+        <<: *MODELS
+        value: Valor
+      franchisee:
+        <<: *BASIC
+        <<: *MODELS
+        address: Endereço
+        address_number: Número
+        cep: CEP
+        email: E-mail
+      guest:
+        <<: *BASIC
+        <<: *MODELS
+      menu_item:
+        <<: *BASIC
+        <<: *MODELS
+        icon: Ícone
+        link: Endereço
+        menu_item: Menu Pai
+        name: Texto
+        permission: Permissão
+        permission_check: Checagem de Permissão
+        position: Posição
+        published: Publicado
+      payment_status:
+        <<: *BASIC
+        <<: *MODELS
+      payment_type:
+        <<: *BASIC
+        <<: *MODELS
+      property:
+        <<: *BASIC
+        <<: *MODELS
+        address: Endereço
+        address_number: Número
+        accreditation_date: Data do Credenciamento
+        deaccreditation_date: Data do Descredenciamento
+        geolocation: Geolocalização
+        pets_accepted: Aceita Animais de Estimação
+        cancellation_period: Periodo de Cancelamento
+        breakfest: Café da Manhã
+        accreditation_statuses: Status do Credenciamento
+        type_accomodations: Tipos de Acomodação
+        cities: Cidade
+        franchisees: Franqueado
+      rating:
+        <<: *BASIC
+        <<: *MODELS
+      reserve:
+        <<: *BASIC
+        <<: *MODELS
+      reserve_status:
+        <<: *BASIC
+        <<: *MODELS
+      role:
+        <<: *BASIC
+        <<: *MODELS
+      state:
+        <<: *BASIC
+        <<: *MODELS
+        acronym: Sigla
+        ibge: IBGE
+      type_accommodation:
+        <<: *BASIC
+        <<: *MODELS
+      type_fee:
+        <<: *BASIC
+        <<: *MODELS
+      type_trip:
+        <<: *BASIC
+        <<: *MODELS
+      unavailability:
+        <<: *BASIC
+        <<: *MODELS
+      user:
+        <<: *BASIC
+        <<: *MODELS
+  views:
+    pagination:
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "Nenhum %{entry_name} encontrado(a)"
+          one: "Exibindo <b>1</b> %{entry_name}"
+          other: "Exibindo <b>%{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "Exibindo %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> de <b>%{total}</b> no total"

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  color: MyString
+  mark: MyString
+  mileage: MyString
+  plate: MyString
+  state_federation: MyString
+
+two:
+  description: MyString
+  color: MyString
+  mark: MyString
+  mileage: MyString
+  plate: MyString
+  state_federation: MyString

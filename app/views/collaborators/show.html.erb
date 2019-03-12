@@ -1,0 +1,31 @@
+<%= render 'shared/show', object: @collaborator, excluded_columns: ['user_id','address_id']  %>
+
+
+<div class="box box-primary">
+  <div class="box-header with-border">
+    <h3 class="box-title">
+      Dados do Usuário
+    </h3>
+  </div>
+  <div class="box-body no-padding">
+    <table class="table table-bordered table-striped no-padding">
+      <tbody>
+        <tr>
+          <th width='15%'><%= User.human_attribute_name(:name) %></th>
+          <td><%= @collaborator.user.name %></td>
+        </tr>
+        <tr>
+          <th width='15%'><%= User.human_attribute_name(:email) %></th>
+          <td><%= @collaborator.user.email %></td>
+        </tr>
+        <tr>
+          <th width='15%'><%= Collaborator.human_attribute_name(:address) %></th>
+          <td><%= @collaborator.address.full_address %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+</div>

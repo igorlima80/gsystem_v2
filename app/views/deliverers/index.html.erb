@@ -1,0 +1,38 @@
+
+<div class="box box-primary">
+  <div class="box-header with-border">
+    <h3 class="box-title">
+      Entregadores
+    </h3>
+  </div>
+  <div class="box-body">
+    <table class="table table-striped datatables">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th><%= User.human_attribute_name(:name) %></th>
+          <th><%= User.human_attribute_name(:email) %></th>
+          <th>Data de Admissão</th>
+          <th>Data de Demissão</th>
+          <th><%= User.human_attribute_name(:city) %></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @deliverers.each do |fr| %>
+          <tr>
+            <td><%= link_to fr.id, fr %></td>
+            <td><%= fr.user.name %></td>
+            <td><%= fr.user.email %></td>
+            <td><%= fr.admission_date %></td>
+            <td><%= fr.resignation_date %></td>
+            <td><%= fr.address.city.name_with_state %></td>
+            <td>
+              <%= render 'shared/action_links', object: fr %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
