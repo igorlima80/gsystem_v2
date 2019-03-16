@@ -19,7 +19,7 @@ pt-BR:
       vehicle: Veículo     
       role: Permissão
       state: Estado
-      user: Usuário
+      
     attributes:
       name_and_description: &BASIC
         name: Nome
@@ -80,7 +80,7 @@ pt-BR:
         <<: *BASIC
         <<: *MODELS
         birth_date: Data de Nascimento
-        registration: Registro
+        registration: Estado de Registro  
         observation: Observação           
         
       address:
