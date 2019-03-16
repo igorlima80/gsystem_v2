@@ -18,72 +18,62 @@ pt-BR:
       type_deliverer: Tipo de Entregador
       vehicle: Veículo     
       role: Permissão
-      state: Estado
-      
+      state: Estado      
     attributes:
       name_and_description: &BASIC
         name: Nome
         description: Descrição
         created_at: Criação
         updated_at: Atualização
-        
       collaborator:
         <<: *BASIC
         <<: *MODELS
         admission_date: Data de Admissão
         resignation_date: Data de Demissão
-
       deliverer:
         <<: *BASIC
         <<: *MODELS
         admission_date: Data de Admissão
         resignation_date: Data de Demissão
-
-       vehicle:
+      vehicle:
         <<: *BASIC
         <<: *MODELS
         color: Cor
         mark: Marca
         mileage: Quilometragem
         plate: Placa
-        state_federation: Estado da Federação     
-
+        state_federation: Estado da Federação  
        product:
         <<: *BASIC
         <<: *MODELS
         canister: Vasilhame
         short_description: Descrição Curta
         code_anp: Código da ANP
-
        supplier_legal:
         <<: *BASIC
         <<: *MODELS
         social_name: Nome Social
         phantasy_name: Nome Fantasia
         state_registration: Estado de Registro 
-
       supplier_physical:
         <<: *BASIC
         <<: *MODELS
         identity: Identidade
         phantasy_name: Nome Fantasia
-        state_registration: Estado de Registro  
-
+        state_registration: Estado de Registro
       legal_customer:
         <<: *BASIC
         <<: *MODELS
         social_name: Nome Social
         phantasy_name: Nome Fantasia
         state_registration: Estado de Registro  
-        observation: Observação         
-
+        observation: Observação
       physical_customer:
         <<: *BASIC
         <<: *MODELS
         birth_date: Data de Nascimento
         registration: Estado de Registro  
-        observation: Observação           
-        
+        observation: Observação       
       address:
         <<: *BASIC
         <<: *MODELS
@@ -91,13 +81,11 @@ pt-BR:
         number: Número
         complement: Complemento
         district: Bairro
-        zipcode: CEP
-      
+        zipcode: CEP      
       city:
         <<: *BASIC
         <<: *MODELS
-        ibge: IBGE
-      
+        ibge: IBGE      
       guest:
         <<: *BASIC
         <<: *MODELS
@@ -111,9 +99,7 @@ pt-BR:
         permission: Permissão
         permission_check: Checagem de Permissão
         position: Posição
-        published: Publicado
-      
-     
+        published: Publicado     
       role:
         <<: *BASIC
         <<: *MODELS
@@ -121,8 +107,7 @@ pt-BR:
         <<: *BASIC
         <<: *MODELS
         acronym: Sigla
-        ibge: IBGE
-      
+        ibge: IBGE      
       user:
         <<: *BASIC
         <<: *MODELS
