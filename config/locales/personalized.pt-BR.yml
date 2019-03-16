@@ -26,6 +26,7 @@ pt-BR:
         description: Descrição
         created_at: Criação
         updated_at: Atualização
+        
       collaborator:
         <<: *BASIC
         <<: *MODELS
