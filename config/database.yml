@@ -17,6 +17,6 @@ test:
 production:
  adapter: postgresql
  encoding: unicode
- url: <%= ENV['DATABASE_URL'] %>
+ url: <%= ENV['gsystem'] %>
  encoding: unicode
  pool: 5
