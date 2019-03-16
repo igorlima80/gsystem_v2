@@ -6,15 +6,12 @@
 ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.plural /^(ox)$/i, '\1en'
 #   inflect.singular /^(ox)en/i, '\1'
-  inflect.irregular 'conveniência', 'conveniências'
-  inflect.irregular 'acomodação', 'acomodações'
-  inflect.irregular 'avaliação', 'avaliações'
-  inflect.irregular 'status do credenciamento', 'status dos credenciamentos'
-  inflect.irregular 'status do pagamento', 'status dos pagamentos'
-  inflect.irregular 'status da reserva', 'status das reservas'
-  inflect.irregular 'tipo de taxa', 'tipos de taxas'
-  inflect.irregular 'tipo de viagem', 'tipos de viagens'
-  inflect.irregular 'tipo de acomodação', 'tipos de acomodações'
+  inflect.irregular 'colaborador', 'colaboradores'
+  inflect.irregular 'entregador', 'entregadores'
+  inflect.irregular 'fornecedor pessoa jurídica', 'fornecedores pessoa jurídica'
+  inflect.irregular 'fornecedor Pessoa Física', 'fornecedores pessoa física'
+  inflect.irregular 'cliente pessoa jurídica', 'clientes pessoa jurídica'
+  inflect.irregular 'cliente pessoa física', 'clientes pessoa física'
   inflect.irregular 'item de menu', 'itens de menu'
 
 #   inflect.uncountable %w( fish sheep )

@@ -2,7 +2,17 @@
 pt-BR:
   activerecord:
     models: &MODELS
-      accommodation: Acomodação
+      collaborator: Colaborador
+      deliverer: "Entregador"
+      estabilishment: "Estabelecimento"
+      deliverer_status: "Status do Entregador"
+      type_deliverer: "Tipo do Entregador"
+      vehicle: "Veículo"
+      product: "Produto"
+      supplier_legal: "Fornecedor Pessoa Jurídica"
+      supplier_physical: "Fornecedor Pessoa Física"
+      legal_customer: "Cliente Pessoa Jurídica"
+      physical_customer: "Cliente Pessoa Física"
       accreditation_status: Status do Credenciamento
       address: Endereço
       cancellation: Cancelamento
@@ -25,24 +35,59 @@ pt-BR:
       type_trip: Tipo de Viagem
       unavailability: Indisponibilidade
       user: Usuário
+      sex: "Sexo"
     attributes:
       name_and_description: &BASIC
         name: Nome
         description: Descrição
         created_at: Criação
         updated_at: Atualização
-      accommodation:
+      collaborator:
         <<: *BASIC
         <<: *MODELS
-        value_per_night: Valor da Diária
-        maximum_adult: Máximo de Adultos
-        maximum_child: Máximo de Crianças
-        available: Disponível
-        rating_score: Nota de Avaliação
-        images: Imagens
-      accreditation_status:
+        admission_date: "Data de Admissão"
+        resignation_date: "Data de Demissão"
+      deliverer:
         <<: *BASIC
         <<: *MODELS
+        admission_date: "Data de Admissão"
+        resignation_date: "Data de Demissão" 
+      vehicle:
+        <<: *BASIC
+        <<: *MODELS
+        color: "Cor"
+        mark: "Marca"
+        mileage: "Quilometragem"
+        plate: "Placa"
+        state_federation: "Estado da Federação"
+      product:
+        <<: *BASIC
+        <<: *MODELS
+        canister: "Vasilhame"
+        short_description: "Descrição Curta"
+        code_anp: "Código da ANP"
+      supplier_legal:
+        <<: *BASIC
+        <<: *MODELS
+        social_name: "Razão Social"
+        fantasy_name: "Nome Fantasia"    
+        state_registration: "Estado de Registro"
+      supplier_physical:
+        <<: *BASIC
+        <<: *MODELS  
+        identity: "Identidade"
+      legal_customer:
+        <<: *BASIC
+        <<: *MODELS  
+        social_name: "Razão Social"
+        fantasy_name: "Nome Fantasia"
+        observation: "Observação"
+      physical_customer:
+        <<: *BASIC
+        <<: *MODELS  
+        birth_date: "Data de Nascimento"  
+        registration: "Registro"
+        observation: "Observação"
       address:
         <<: *BASIC
         <<: *MODELS
@@ -51,30 +96,10 @@ pt-BR:
         complement: Complemento
         district: Bairro
         zipcode: CEP
-      cancellation:
-        <<: *BASIC
-        <<: *MODELS
       city:
         <<: *BASIC
         <<: *MODELS
         ibge: IBGE
-      convenience:
-        <<: *BASIC
-        <<: *MODELS
-      fee:
-        <<: *BASIC
-        <<: *MODELS
-        value: Valor
-      franchisee:
-        <<: *BASIC
-        <<: *MODELS
-        address: Endereço
-        address_number: Número
-        cep: CEP
-        email: E-mail
-      guest:
-        <<: *BASIC
-        <<: *MODELS
       menu_item:
         <<: *BASIC
         <<: *MODELS
@@ -86,36 +111,6 @@ pt-BR:
         permission_check: Checagem de Permissão
         position: Posição
         published: Publicado
-      payment_status:
-        <<: *BASIC
-        <<: *MODELS
-      payment_type:
-        <<: *BASIC
-        <<: *MODELS
-      property:
-        <<: *BASIC
-        <<: *MODELS
-        address: Endereço
-        address_number: Número
-        accreditation_date: Data do Credenciamento
-        deaccreditation_date: Data do Descredenciamento
-        geolocation: Geolocalização
-        pets_accepted: Aceita Animais de Estimação
-        cancellation_period: Periodo de Cancelamento
-        breakfest: Café da Manhã
-        accreditation_statuses: Status do Credenciamento
-        type_accomodations: Tipos de Acomodação
-        cities: Cidade
-        franchisees: Franqueado
-      rating:
-        <<: *BASIC
-        <<: *MODELS
-      reserve:
-        <<: *BASIC
-        <<: *MODELS
-      reserve_status:
-        <<: *BASIC
-        <<: *MODELS
       role:
         <<: *BASIC
         <<: *MODELS
@@ -124,21 +119,10 @@ pt-BR:
         <<: *MODELS
         acronym: Sigla
         ibge: IBGE
-      type_accommodation:
-        <<: *BASIC
-        <<: *MODELS
-      type_fee:
-        <<: *BASIC
-        <<: *MODELS
-      type_trip:
-        <<: *BASIC
-        <<: *MODELS
-      unavailability:
-        <<: *BASIC
-        <<: *MODELS
       user:
         <<: *BASIC
         <<: *MODELS
+        password: "Senha"
   views:
     pagination:
       first: "&laquo;"
