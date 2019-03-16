@@ -9,3 +9,4 @@ MenuItem.create name: 'Fornecedores (Pessoa Jurídica)', icon: 'industry', link:
 MenuItem.create name: 'Fornecedores (Pessoa Física)', icon: 'black-tie', link: 'supplier_physicals_path', position: 8, target: '_self', permission: 'manage', permission_check: 'SupplierPhysical', menu_item_id: nil, published: true
 MenuItem.create name: 'Clientes (Pessoa Jurídica)', icon: 'institution', link: 'legal_customers_path', position: 9, target: '_self', permission: 'manage', permission_check: 'LegalCustomer', menu_item_id: nil, published: true
 MenuItem.create name: 'Clientes (Pessoa Física)', icon: 'male', link: 'physical_customers_path', position: 10, target: '_self', permission: 'manage', permission_check: 'PhysicalCustomer', menu_item_id: nil, published: true
+
