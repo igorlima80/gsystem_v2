@@ -2,78 +2,47 @@
 pt-BR:
   activerecord:
     models: &MODELS
+      accommodation: Acomodação
+      accreditation_status: Status do Credenciamento
       address: Endereço
-      collaborator: Colaborador
+      cancellation: Cancelamento
       city: Cidade
-      deliverer_status: Status do Entregador
-      deliverer: Entregador
-      estabilishment: Estabelecimento
-      legal_customer: Cliente Pessoa Jurídica      
+      convenience: Comodidade
+      fee: Taxa
+      franchisee: Franqueado
+      guest: Visitante
       menu_item: Item de Menu
-      physical_customer: Cliente Pessoa Física
-      product: Produto
-      sex: Sexo
-      supplier_legal: Fornecedor Pessoa Física
-      supplier_physical: Fornecedor Pessoa Jurídica
-      type_deliverer: Tipo de Entregador
-      vehicle: Veículo     
+      payment_status: Status do Pagamento
+      payment_type: Tipo de Pagamento
+      property: Proprietário
+      rating: Avaliação
+      reserve: Reserva
+      reserve_status: Status da Reserva
       role: Permissão
-      state: Estado      
+      state: Estado
+      type_accommodation: Tipo de Acomodação
+      type_fee: Tipo de Taxa
+      type_trip: Tipo de Viagem
+      unavailability: Indisponibilidade
+      user: Usuário
     attributes:
       name_and_description: &BASIC
         name: Nome
         description: Descrição
         created_at: Criação
         updated_at: Atualização
-      collaborator:
+      accommodation:
         <<: *BASIC
         <<: *MODELS
-        admission_date: Data de Admissão
-        resignation_date: Data de Demissão
-      deliverer:
+        value_per_night: Valor da Diária
+        maximum_adult: Máximo de Adultos
+        maximum_child: Máximo de Crianças
+        available: Disponível
+        rating_score: Nota de Avaliação
+        images: Imagens
+      accreditation_status:
         <<: *BASIC
         <<: *MODELS
-        admission_date: Data de Admissão
-        resignation_date: Data de Demissão
-      vehicle:
-        <<: *BASIC
-        <<: *MODELS
-        color: Cor
-        mark: Marca
-        mileage: Quilometragem
-        plate: Placa
-        state_federation: Estado da Federação  
-       product:
-        <<: *BASIC
-        <<: *MODELS
-        canister: Vasilhame
-        short_description: Descrição Curta
-        code_anp: Código da ANP
-       supplier_legal:
-        <<: *BASIC
-        <<: *MODELS
-        social_name: Nome Social
-        phantasy_name: Nome Fantasia
-        state_registration: Estado de Registro 
-      supplier_physical:
-        <<: *BASIC
-        <<: *MODELS
-        identity: Identidade
-        phantasy_name: Nome Fantasia
-        state_registration: Estado de Registro
-      legal_customer:
-        <<: *BASIC
-        <<: *MODELS
-        social_name: Nome Social
-        phantasy_name: Nome Fantasia
-        state_registration: Estado de Registro  
-        observation: Observação
-      physical_customer:
-        <<: *BASIC
-        <<: *MODELS
-        birth_date: Data de Nascimento
-        registration: Estado de Registro  
-        observation: Observação       
       address:
         <<: *BASIC
         <<: *MODELS
@@ -81,11 +50,28 @@ pt-BR:
         number: Número
         complement: Complemento
         district: Bairro
-        zipcode: CEP      
+        zipcode: CEP
+      cancellation:
+        <<: *BASIC
+        <<: *MODELS
       city:
         <<: *BASIC
         <<: *MODELS
-        ibge: IBGE      
+        ibge: IBGE
+      convenience:
+        <<: *BASIC
+        <<: *MODELS
+      fee:
+        <<: *BASIC
+        <<: *MODELS
+        value: Valor
+      franchisee:
+        <<: *BASIC
+        <<: *MODELS
+        address: Endereço
+        address_number: Número
+        cep: CEP
+        email: E-mail
       guest:
         <<: *BASIC
         <<: *MODELS
@@ -99,7 +85,37 @@ pt-BR:
         permission: Permissão
         permission_check: Checagem de Permissão
         position: Posição
-        published: Publicado     
+        published: Publicado
+      payment_status:
+        <<: *BASIC
+        <<: *MODELS
+      payment_type:
+        <<: *BASIC
+        <<: *MODELS
+      property:
+        <<: *BASIC
+        <<: *MODELS
+        address: Endereço
+        address_number: Número
+        accreditation_date: Data do Credenciamento
+        deaccreditation_date: Data do Descredenciamento
+        geolocation: Geolocalização
+        pets_accepted: Aceita Animais de Estimação
+        cancellation_period: Periodo de Cancelamento
+        breakfest: Café da Manhã
+        accreditation_statuses: Status do Credenciamento
+        type_accomodations: Tipos de Acomodação
+        cities: Cidade
+        franchisees: Franqueado
+      rating:
+        <<: *BASIC
+        <<: *MODELS
+      reserve:
+        <<: *BASIC
+        <<: *MODELS
+      reserve_status:
+        <<: *BASIC
+        <<: *MODELS
       role:
         <<: *BASIC
         <<: *MODELS
@@ -107,11 +123,22 @@ pt-BR:
         <<: *BASIC
         <<: *MODELS
         acronym: Sigla
-        ibge: IBGE      
+        ibge: IBGE
+      type_accommodation:
+        <<: *BASIC
+        <<: *MODELS
+      type_fee:
+        <<: *BASIC
+        <<: *MODELS
+      type_trip:
+        <<: *BASIC
+        <<: *MODELS
+      unavailability:
+        <<: *BASIC
+        <<: *MODELS
       user:
         <<: *BASIC
         <<: *MODELS
-        password: Senha
   views:
     pagination:
       first: "&laquo;"
